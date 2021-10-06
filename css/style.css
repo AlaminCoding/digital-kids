@@ -1,0 +1,1403 @@
+@font-face {
+  font-family: "Gordita Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/Gordita Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gordita Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/Gordita Medium.woff") format("woff");
+}
+
+.body-wrapper {
+  overflow-x: hidden !important;
+  position: relative;
+}
+
+h2 {
+  font-family: "Gordita Medium";
+}
+
+p {
+  font-family: "Gordita Regular";
+}
+
+.heading {
+  color: #202020;
+  font-family: "Gordita Medium";
+  font-size: calc(24px + (50 - 24) * ((100vw - 360px) / (1920 - 360)));
+  line-height: calc(32px + (65 - 32) * ((100vw - 360px) / (1920 - 360)));
+}
+
+.heading span {
+  color: #00ce72;
+}
+
+.sub-heading {
+  color: #202020;
+  font-family: "Gordita Regular";
+  font-size: calc(18px + (22 - 18) * ((100vw - 360px) / (1920 - 360)));
+  line-height: calc(28px + (45 - 28) * ((100vw - 360px) / (1920 - 360)));
+}
+
+.normal-text {
+  font-family: "Gordita Regular";
+  color: #202020;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+section {
+  margin-top: 80px;
+}
+
+.green-btn {
+  font-family: "Gordita Medium";
+  font-size: 18px;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #00ce72;
+  border: 2px solid #00ce72;
+}
+
+.green-btn:hover {
+  background-color: transparent;
+  color: #00ce72;
+}
+
+.white-btn {
+  font-family: "Gordita Medium";
+  font-size: 18px;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.white-btn:hover {
+  background-color: white;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 9;
+}
+
+.my-nav {
+  width: 100%;
+  height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.my-nav .logo img {
+  height: 110px;
+}
+
+.my-nav .my-menu {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.my-nav .my-menu li {
+  margin-left: 35px;
+}
+
+.my-nav .my-menu li a {
+  color: white;
+  font-family: "Gordita Medium";
+  font-size: 20px;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.my-nav .my-menu li a:hover {
+  color: #00ce72;
+}
+
+.my-nav .toggle-btn {
+  height: 35px;
+  width: 40px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.my-nav .toggle-btn .bar {
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  border-radius: 2px;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.my-nav .toggle-btn .bar1 {
+  top: 0;
+  left: 0;
+}
+
+.my-nav .toggle-btn .bar2 {
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.my-nav .toggle-btn .bar3 {
+  bottom: 0;
+  left: 0;
+}
+
+.my-nav-scroll {
+  height: 110px;
+}
+
+@media screen and (min-width: 1200px) {
+  .my-nav-color .logo img {
+    height: 90px;
+  }
+  .my-nav-color .my-menu li a {
+    color: #005bb5;
+    font-size: 18px;
+  }
+  .my-nav-color .my-menu li a:hover {
+    color: #00ce72;
+  }
+  .my-nav-color .my-menu li a.white-btn {
+    color: #005bb5;
+    border: 2px solid #005bb5;
+  }
+  .my-nav-color .my-menu li a.white-btn:hover {
+    color: white;
+    background-color: #005bb5;
+  }
+  .my-nav-color .my-menu li a.green-btn {
+    color: white;
+  }
+  .my-nav-color .my-menu li a.green-btn:hover {
+    color: green;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  nav {
+    background-color: #005bb5;
+  }
+  .my-nav {
+    height: 100px;
+  }
+  .my-nav .toggle-btn {
+    display: block;
+  }
+  .my-nav .logo img {
+    height: 80px;
+  }
+  .my-nav .my-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: fixed;
+    background-color: #005bb5;
+    top: 100px;
+    right: -100%;
+    height: 91vh;
+    width: 100%;
+    border-top: 1px solid white;
+    padding-top: 30px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .my-nav .my-menu li {
+    margin-bottom: 30px;
+    margin-left: 22px;
+  }
+  .my-nav .my-menu li a {
+    font-size: 18px;
+  }
+}
+
+.banner {
+  width: 100%;
+  height: 807.19px;
+  background-image: url("../img/banner.png");
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.banner .banner-container {
+  height: 62%;
+}
+
+.banner .banner-row {
+  height: 100%;
+}
+
+.banner .banner-img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.banner .banner-img img {
+  width: 780px;
+  position: absolute;
+  bottom: 0;
+  right: -125px;
+}
+
+.banner .banner-left h2 {
+  font-size: calc(24px + (50 - 24) * ((100vw - 360px) / (1920 - 360)));
+  color: white;
+  line-height: calc(28px + (65 - 28) * ((100vw - 360px) / (1920 - 360)));
+  color: white;
+  max-width: 765px;
+}
+
+.banner .banner-left p {
+  color: white;
+  max-width: 720px;
+  font-size: 20px;
+  line-height: calc(30px + (40 - 30) * ((100vw - 360px) / (1920 - 360)));
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+@media screen and (max-width: 1400px) {
+  .banner .banner-left h2 {
+    max-width: 600px;
+  }
+  .banner .banner-left p {
+    max-width: 550px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .banner .banner-left h2 {
+    max-width: 450px;
+  }
+  .banner .banner-left p {
+    max-width: 430px;
+  }
+  .banner .banner-img img {
+    right: -140px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .banner {
+    height: auto;
+    padding-top: 150px;
+    background-position: 35%;
+  }
+  .banner .banner-left h2 {
+    max-width: 765px;
+  }
+  .banner .banner-left p {
+    max-width: 720px;
+  }
+  .banner .banner-img {
+    position: static;
+  }
+  .banner .banner-img img {
+    position: static;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+.explore-app h2 {
+  color: #005bb5;
+  font-size: calc(26px + (35 - 26) * ((100vw - 360px) / (1920 - 360)));
+}
+
+.explore-app p {
+  color: #6b6b6b;
+  font-size: 18px;
+  max-width: 802px;
+  line-height: 30px;
+  margin-top: 22px;
+}
+
+.app-slider {
+  padding: 0px 60px;
+}
+
+.app-slider .glide__arrow {
+  background-color: white;
+  border: 1px solid #005bb5;
+  border-radius: 50%;
+  color: #005bb5;
+  font-size: 20px;
+  padding: 8.76px 9px;
+  top: 34%;
+}
+
+.app-slider .glide__arrow--left {
+  left: -63px;
+  background-color: #005bb5;
+  color: white;
+}
+
+.app-slider .glide__arrow--right {
+  right: -63px;
+}
+
+.as-box {
+  text-align: center;
+}
+
+.as-box p {
+  font-family: "Gordita Regular";
+  color: #202020;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.app-slide-img {
+  height: 115px;
+  width: 115px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px auto;
+  margin: 0 auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.img1 {
+  background-image: url("../img/vector-icons/icon1.png");
+  border: 1px solid #005bb5;
+}
+
+.img1:hover {
+  background-color: #005bb5;
+  background-image: url("../img/vector-icons/1.png");
+}
+
+.img2 {
+  background-image: url("../img/vector-icons/icon2.png");
+  border: 1px solid #005bb5;
+}
+
+.img2:hover {
+  background-color: #005bb5;
+  background-image: url("../img/vector-icons/2.png");
+}
+
+.img3 {
+  background-image: url("../img/vector-icons/icon3.png");
+  border: 1px solid #005bb5;
+}
+
+.img3:hover {
+  background-color: #005bb5;
+  background-image: url("../img/vector-icons/3.png");
+}
+
+.img4 {
+  background-image: url("../img/vector-icons/icon4.png");
+  border: 1px solid #005bb5;
+}
+
+.img4:hover {
+  background-color: #005bb5;
+  background-image: url("../img/vector-icons/4.png");
+}
+
+.img5 {
+  background-image: url("../img/vector-icons/icon5.png");
+  border: 1px solid #005bb5;
+}
+
+.img5:hover {
+  background-color: #005bb5;
+  background-image: url("../img/vector-icons/5.png");
+}
+
+.img6 {
+  background-image: url("../img/vector-icons/icon6.png");
+  border: 1px solid #005bb5;
+}
+
+.img6:hover {
+  background-color: #005bb5;
+  background-image: url("../img/vector-icons/6.png");
+}
+
+.img7 {
+  background-image: url("../img/vector-icons/icon7.png");
+  border: 1px solid #005bb5;
+}
+
+.img7:hover {
+  background-color: #005bb5;
+  background-image: url("../img/vector-icons/7.png");
+}
+
+.img8 {
+  background-image: url("../img/vector-icons/icon8.png");
+  border: 1px solid #005bb5;
+}
+
+.img8:hover {
+  background-color: #005bb5;
+  background-image: url("../img/vector-icons/8.png");
+}
+
+@media screen and (max-width: 400px) {
+  .app-slide-img {
+    height: 100px;
+    width: 100px;
+    background-size: 55px auto;
+  }
+  .app-slider {
+    padding: 0px 50px;
+  }
+  .app-slider .glide__arrow--left {
+    left: -50px;
+  }
+  .app-slider .glide__arrow--right {
+    right: -50px;
+  }
+}
+
+.app-input {
+  position: relative;
+}
+
+.app-input input {
+  height: 70px;
+  width: 100%;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  font-family: "Gordita Regular";
+  padding-left: 30px;
+  font-size: 18px;
+}
+
+.app-input input:focus {
+  outline: none;
+  border: 1px solid #005bb5;
+}
+
+.app-input input::-webkit-input-placeholder {
+  color: #dedede;
+}
+
+.app-input input:-ms-input-placeholder {
+  color: #dedede;
+}
+
+.app-input input::-ms-input-placeholder {
+  color: #dedede;
+}
+
+.app-input input::placeholder {
+  color: #dedede;
+}
+
+.app-input i {
+  position: absolute;
+  font-size: 30px;
+  color: #dedede;
+  top: 50%;
+  right: 30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.app-input select {
+  height: 70px;
+  width: 100%;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  font-family: "Gordita Regular";
+  padding-left: 135px;
+  -webkit-appearance: initial;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.app-input select:focus {
+  outline: none;
+  border: 1px solid #005bb5;
+}
+
+.app-input .hider {
+  height: 10px;
+  width: 20px;
+  background-color: white;
+  position: absolute;
+  top: 44%;
+  right: 3px;
+}
+
+.app-input .caret {
+  z-index: -1;
+}
+
+.app-input span {
+  position: absolute;
+  font-family: "Gordita Regular";
+  color: #dedede;
+  top: 50%;
+  left: 30px;
+  font-size: 18px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.app-box {
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.07);
+}
+
+.app-box .app-img img {
+  width: 100%;
+}
+
+.app-box .app-content {
+  padding: 0px 20px 20px 20px;
+}
+
+.app-box .app-content hr {
+  border-top: 1px solid #dedede;
+  margin-top: 0;
+}
+
+.app-box .app-content .app-box-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-box .app-content .app-box-top span {
+  color: #6b6b6b;
+  font-family: "Gordita Regular";
+  font-size: 15px;
+}
+
+.app-box .app-content .app-box-top small {
+  color: #bcbcbc;
+  font-size: 13px;
+  margin-left: 2px;
+}
+
+.app-box .app-content p {
+  font-family: "Gordita Regular";
+  color: #202020;
+  margin: 10px 0px 20px 0px;
+  font-size: 18px;
+}
+
+.app-box .app-content .app-box-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-box .app-content .app-box-bottom img {
+  width: 50px;
+  height: auto;
+  margin: 0;
+}
+
+.app-box .app-content .app-box-bottom span {
+  margin-left: 8px;
+  font-family: "Gordita Regular";
+  font-size: 18px;
+  color: #202020;
+}
+
+.app-box .app-label {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 49px;
+  width: 52px;
+  background-color: #005bb5;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  font-family: "Gordita Medium";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.text-cta {
+  margin-top: 200px;
+}
+
+.text-cta-img {
+  position: relative;
+  width: 100%;
+}
+
+.text-cta-img .cta-img {
+  height: 640px;
+  position: relative;
+  right: -85px;
+}
+
+.text-cta-img .green-circle {
+  width: 815px;
+  position: absolute;
+  top: -85px;
+  right: -100%;
+  z-index: -1;
+}
+
+.text-cta-box {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.text-cta-box .sub-heading {
+  margin: 20px 0px;
+}
+
+.text-cta-box .normal-text {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1250px) {
+  .text-cta-img .cta-img {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .text-cta-img .green-circle {
+    right: 0;
+    top: -20px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .text-cta-img {
+    margin-top: 30px;
+  }
+  .text-cta-img .cta-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.feature-section {
+  margin-top: 100px;
+}
+
+.feature-section .heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feature-section .sub-heading {
+  max-width: 810px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.feature-box {
+  margin-top: 50px;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.07);
+}
+
+.feature-box img {
+  width: 100%;
+}
+
+.feature-box .feature-bottom {
+  padding: 20px;
+}
+
+.feature-box .feature-bottom h2 {
+  color: #202020;
+  font-family: "Gordita Medium";
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.feature-box .feature-bottom p {
+  font-size: 16px;
+  color: #6b6b6b;
+  font-family: "Gordita Regular";
+  line-height: 28px;
+  margin: 0;
+}
+
+.project-section {
+  margin-top: 250px;
+}
+
+.project-left {
+  text-align: right;
+  position: relative;
+  height: 650px;
+}
+
+.project-left .p-img {
+  position: absolute;
+  width: 820px;
+  top: 0;
+  right: 0;
+}
+
+.project-left .green-circle {
+  position: absolute;
+  top: -15%;
+  left: -80%;
+  z-index: -1;
+}
+
+.project-right {
+  padding-left: 20px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.project-right ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 0;
+  font-family: "Gordita Regular";
+}
+
+.project-right ul li {
+  margin-top: 10px;
+}
+
+.project-right ul li i {
+  margin-right: 5px;
+}
+
+.project-right ul li .green-check {
+  color: #00ce72;
+}
+
+.project-right ul li .blue-check {
+  color: #005bb5;
+}
+
+.project-right .green-btn {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1090px) {
+  .project-left {
+    height: auto;
+  }
+  .project-left .p-img {
+    width: 100%;
+    position: static;
+  }
+  .project-left .green-circle {
+    top: -15px;
+    left: -50%;
+    width: 80%;
+  }
+  .project-right ul {
+    margin-top: 20px;
+  }
+}
+
+.cta-slider {
+  position: relative;
+  margin-top: 250px;
+}
+
+.glide-wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cs-box img {
+  width: 50px;
+  margin-bottom: 30px;
+}
+
+.cs-box p {
+  font-family: "Gordita Regular";
+  font-size: 22px;
+  line-height: 40px;
+}
+
+.cta-glide .glide__bullets {
+  left: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  bottom: -20px;
+}
+
+.cta-glide .glide__bullet {
+  background-color: white;
+  border: 1px solid #6b6b6b;
+}
+
+.cta-glide .glide__bullet--active {
+  background-color: #00ce72;
+  border: 1px solid #00ce72;
+}
+
+.cta-circle {
+  position: absolute;
+  top: -28%;
+  right: -22%;
+  z-index: -1;
+}
+
+.cta-circle .ques-img {
+  position: absolute;
+  top: 50px;
+  left: 35%;
+}
+
+.cta-circle .cross-img {
+  position: absolute;
+  bottom: 50px;
+  left: 35%;
+}
+
+@media screen and (max-width: 1650px) {
+  .cta-circle {
+    right: -30%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .cta-img img {
+    width: 415px;
+  }
+  .cta-circle {
+    top: -22%;
+    right: -15%;
+  }
+  .cta-circle .circle-img {
+    width: 580px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .cta-circle {
+    right: -25%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .flex-inverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .cta-img img {
+    width: 100%;
+  }
+  .cta-circle {
+    top: 0;
+    right: -25%;
+    width: 685px;
+  }
+  .cta-circle .circle-img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .cta-circle {
+    width: 485px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cta-circle {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cta-circle {
+    width: 350px;
+  }
+}
+
+footer {
+  background-color: #005bb5;
+  color: white;
+  padding: 40px 0px 20px 0px;
+  margin-top: 250px;
+}
+
+footer h2 {
+  font-size: 22px;
+  font-family: "Gordita Medium";
+  margin-top: 40px;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+}
+
+footer ul li {
+  margin-top: 5px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Gordita Regular";
+}
+
+footer .social-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+footer .social-img img {
+  margin-top: 10px;
+  width: 52px;
+  margin-right: 10px;
+}
+
+footer .copyright {
+  margin-top: 80px;
+  font-family: "Gordita Regular";
+  font-size: 14px;
+}
+
+@media screen and (max-width: 800px) {
+  .text-cta {
+    margin-top: 100px;
+  }
+  .feature-section {
+    margin-top: 150px;
+  }
+  .project-section {
+    margin-top: 110px;
+  }
+  .project-right {
+    margin-top: 30px;
+  }
+  .cta-slider {
+    margin-top: 130px;
+  }
+  footer {
+    margin-top: 80px;
+  }
+}
+
+.login-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f1f7fe;
+  overflow-x: hidden;
+}
+
+.login-section .login-img {
+  height: 100vh;
+}
+
+.login-section .login-img img {
+  height: 100%;
+}
+
+.login-section .login-box {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-section .login-box .signup-label {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-section .login-box .signup-label p {
+  font-family: "Gordita Regular";
+  margin-bottom: 0;
+  margin-right: 20px;
+}
+
+.login-section .login-box .login-form {
+  max-width: 600px;
+}
+
+.login-section .login-box .login-form h2 {
+  font-family: "Gordita Medium";
+  font-size: 35px;
+  color: #202020;
+  margin-bottom: 10px;
+}
+
+.login-section .login-box .login-form p {
+  font-family: "Gordita Regular";
+  font-size: 18px;
+  color: #6b6b6b;
+}
+
+.login-section .login-box .login-form .form-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #005bb5;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+.login-section .login-box .login-form .form-btn button {
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  font-family: "Gordita Medium";
+  padding: 7px 30px;
+  background-color: #005bb5;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.login-section .login-box .login-form .form-btn .btn-hover {
+  background-color: white;
+  color: #005bb5;
+}
+
+.login-section .login-box .login-form form {
+  max-width: 500px;
+  margin-top: 35px;
+}
+
+.login-section .login-box .login-form form label,
+.login-section .login-box .login-form form input {
+  display: block;
+}
+
+.login-section .login-box .login-form form label {
+  font-family: "Gordita Medium";
+  margin-bottom: 10px;
+}
+
+.login-section .login-box .login-form form input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  padding-left: 15px;
+  font-family: "Gordita Regular";
+  background: transparent;
+}
+
+.login-section .login-box .login-form form input:focus {
+  outline: none;
+  border: 1px solid #005bb5;
+}
+
+.login-section .login-box .login-form form .form-group {
+  margin-bottom: 25px;
+}
+
+.login-section .login-box .login-form form .label-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.login-section .login-box .login-form form .label-group a {
+  color: #005bb5;
+  font-family: "Gordita Medium";
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.login-section .login-box .login-form form .check-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-section .login-box .login-form form .check-group label {
+  margin: 0;
+  cursor: pointer;
+}
+
+.login-section .login-box .login-form form .check-group input {
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.login-section .login-box .login-form form button {
+  height: 45px;
+  width: 100%;
+  padding: 0;
+}
+
+.login-section .login-box .login-form form .google-btn {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  font-size: 16px;
+  height: 50px;
+  font-family: "Gordita Regular";
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.login-section .login-box .login-form form .google-btn img {
+  margin-right: 10px;
+  height: 22px;
+}
+
+.login-section .login-box .login-form form .google-btn:hover {
+  border: 1px solid #00ce72;
+}
+
+.login-section .login-box .login-form form .or-devider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 0px;
+}
+
+.login-section .login-box .login-form form .or-devider p {
+  font-family: "Gordita Medium";
+  margin: 0;
+  font-size: 18px;
+  color: black;
+  margin: 0px 15px;
+}
+
+.login-section .login-box .login-form form .or-devider hr {
+  border-top: 1px solid #bbbbbb;
+  width: 100%;
+}
+
+.login-section .login-box .login-form .kids-login {
+  display: none;
+}
+
+@media screen and (max-width: 1430px) {
+  .login-section .login-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .login-section .login-box .login-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    border: 1px solid #005bb5;
+  }
+  .login-section .login-box .login-form form .google-btn {
+    border: 1px solid #005bb5;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .login-section .login-box .login-form h2 {
+    font-size: 26px;
+  }
+  .login-section .login-box .login-form p {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .login-section .login-img {
+    position: fixed;
+  }
+  .login-section .login-box {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 115vh;
+  }
+  .login-section .login-box .signup-label {
+    top: 16px;
+  }
+  .login-section .login-box .signup-label p {
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  .login-section .login-box .signup-label .green-btn {
+    font-size: 16px;
+    padding: 5px 15px;
+  }
+  .login-section .login-box .login-form {
+    margin-top: 70px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 50px;
+  }
+  .login-section .login-box .login-form p {
+    font-size: 15px;
+  }
+  .login-section .login-box .login-form form input {
+    background-color: white;
+  }
+  .login-section .login-box .login-form form .or-devider {
+    margin: 5px 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

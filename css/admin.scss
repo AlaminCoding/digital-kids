@@ -1,0 +1,874 @@
+// Font Initialization
+@font-face {
+  font-family: "Gordita Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/Gordita Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Gordita Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/Gordita Medium.woff") format("woff");
+}
+// Color Initialization
+$blue: #005bb5;
+$green: #00ce72;
+$black: #202020;
+
+.body-wrapper {
+  overflow-x: hidden !important;
+  position: relative;
+  background-color: #f1f7fe;
+}
+h2 {
+  font-family: "Gordita Medium";
+  margin: 0;
+}
+p {
+  font-family: "Gordita Regular";
+  margin: 0;
+}
+@mixin btn {
+  font-family: "Gordita Medium";
+  font-size: 18px;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.green-btn {
+  @include btn();
+  background-color: $green;
+  border: 2px solid $green;
+}
+.green-btn:hover {
+  background-color: transparent;
+  color: $green;
+}
+.blue-btn {
+  @include btn();
+  background-color: $blue;
+  border: 2px solid $blue;
+}
+.blue-btn:hover {
+  background-color: transparent;
+  color: $blue;
+}
+// Admin Navbar Panel
+header {
+  padding: 0px 60px;
+  border-bottom: 1px solid #dedede;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+}
+.admin-navbar {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      height: 80px;
+    }
+    i {
+      color: rgb(27, 27, 27);
+      font-size: 40px;
+      margin-left: 80px;
+      cursor: pointer;
+    }
+    #sidebar-toggle {
+      display: none;
+    }
+  }
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    .lang {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin-left: 10px;
+      }
+      .lang-list {
+        position: absolute;
+        top: 40px;
+        right: -9px;
+        border: 1px solid black;
+        padding: 5px;
+        margin: 0;
+        list-style: none;
+        background-color: white;
+        border-radius: 2px;
+        display: none;
+        li {
+          padding: 2px 4px;
+        }
+        li:hover {
+          background-color: $green;
+          color: white;
+        }
+      }
+      .lang-select {
+        cursor: pointer;
+        padding: 10px 0px;
+        position: relative;
+      }
+      .lang-select:hover .lang-list {
+        display: block;
+      }
+    }
+    .navbar-form {
+      width: 450px;
+      height: 56px;
+      position: relative;
+      margin-left: 20px;
+      input {
+        height: 100%;
+        width: 100%;
+        border: 1px solid #dedede;
+        border-radius: 5px;
+        background-color: white;
+        padding-left: 20px;
+        font-family: "Gordita Regular";
+      }
+      input:focus {
+        outline: none;
+      }
+      input::placeholder {
+        color: #dedede;
+        font-size: 20px;
+        font-family: "Gordita Regular";
+      }
+      i {
+        position: absolute;
+        color: #dedede;
+        top: 5.5px;
+        right: 15px;
+        font-size: 25px;
+        cursor: pointer;
+      }
+    }
+    a {
+      margin-left: 20px;
+    }
+  }
+  .toggle-btn {
+    display: none;
+    cursor: pointer;
+    i {
+      font-size: 32px;
+    }
+  }
+}
+@media screen and (max-width: 1230px) {
+  .admin-navbar {
+    .navbar-right {
+      position: fixed;
+      height: 93vh;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: white;
+      top: 80px;
+      right: -100%;
+      padding: 60px;
+      z-index: 999;
+      transition: 0.5s;
+      .lang {
+        .lang-list {
+          z-index: 1;
+        }
+      }
+      .navbar-form {
+        margin-left: 0px;
+        margin-top: 20px;
+      }
+      a {
+        margin-left: 0px;
+        margin-top: 20px;
+      }
+    }
+    .toggle-btn {
+      display: block;
+    }
+  }
+}
+@media screen and (max-width: 1230px) {
+  .admin-navbar {
+    height: 80px;
+    .logo {
+      img {
+        height: 60px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  header {
+    padding: 0px 10px;
+  }
+  .admin-navbar {
+    .navbar-right {
+      padding: 20px 10px;
+      .navbar-form {
+        width: 100%;
+      }
+    }
+  }
+}
+// Main Panel
+.main-panel {
+  margin-top: 100px;
+}
+@media screen and (max-width: 1230px) {
+  .main-panel {
+    margin-top: 80px;
+  }
+}
+.sidebar-nav {
+  float: left;
+  width: 250px;
+  height: 90vh;
+  // background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.sidebar-nav-expand {
+  width: 400px;
+}
+.sidebar-nav-expand-lg {
+  width: 400px;
+}
+.nav-wrapper {
+  width: 148px;
+  height: 100%;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.nav-wrapper:hover {
+  width: 400px;
+}
+.nav-wrapper-expand {
+  width: 400px;
+}
+.panel {
+  height: 90vh;
+  overflow-y: scroll;
+}
+.side-menu {
+  margin: 0;
+  height: 100%;
+  width: 400px;
+  list-style: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 5px;
+  .side-list,
+  .side-list-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 52px;
+    padding-right: 15px;
+    padding: 15px 15px 15px 55px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.5s;
+    .icon-menu {
+      display: flex;
+      align-items: center;
+    }
+    img {
+      width: 35px;
+      height: auto;
+    }
+    p {
+      font-family: "Gordita Regular";
+      color: #6b6b6b;
+      font-size: 20px;
+      margin-left: 50px;
+    }
+    i {
+      color: #b1b1b1;
+      font-size: 20px;
+      transition: 0.5s;
+    }
+  }
+  .side-list:hover,
+  .side-list-bottom:hover {
+    background-color: #f1f7fe;
+    p {
+      color: $blue;
+    }
+  }
+}
+.sub-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-left: 135px;
+  height: 0px;
+  overflow-y: hidden;
+  transition: 0.5s;
+  li {
+    a {
+      color: #6b6b6b;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      padding: 5px;
+
+      i {
+        margin-right: 10px;
+        position: relative;
+        top: 1px;
+        transition: 0.5s;
+      }
+    }
+    a:hover i {
+      margin-right: 12px;
+    }
+  }
+}
+.sub-menu-open {
+  height: 111px;
+}
+
+// Panel Start
+.panel {
+  padding: 30px 42px 0px 30px;
+}
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.pheader-left {
+  .panel-img {
+    display: flex;
+    align-items: center;
+    h2 {
+      font-family: "Gordita Medium";
+      color: #202020;
+      font-size: 28px;
+      margin-left: 15px;
+    }
+  }
+  p {
+    max-width: 900px;
+    color: #6b6b6b;
+    font-family: "Gordita Regular";
+    line-height: 28px;
+    margin-top: 20px;
+  }
+}
+
+// APP INPUT
+.input-wrapper {
+  border: 1px solid #dedede;
+}
+.app-input {
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  .search-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    li {
+      background-color: #005bb5;
+      color: white;
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+      padding: 5px 10px;
+      border-radius: 4px;
+      i {
+        margin-left: 10px;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+  input {
+    height: 100%;
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    border-radius: 0px;
+    outline: none;
+    font-family: "Gordita Regular";
+    padding-left: 30px;
+    font-size: 18px;
+  }
+  input:focus {
+    outline: none;
+  }
+  input::placeholder {
+    color: #dedede;
+  }
+  .search,
+  .help,
+  .caret-select {
+    position: absolute;
+    font-size: 30px;
+    color: #dedede;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+  }
+  .help {
+    right: 30px;
+    // z-index: 1;
+    p {
+      position: absolute;
+      color: black;
+      font-size: 14px;
+      top: -70px;
+      left: -134px;
+      font-family: "Gordita Regular";
+      font-style: normal;
+      width: 300px;
+      background-color: white;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+      border-radius: 5px;
+      display: none;
+      i {
+        position: absolute;
+        top: 54px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+      }
+    }
+  }
+  .help:hover {
+    p {
+      display: block;
+    }
+  }
+  .search {
+    right: 80px;
+  }
+  select {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-family: "Gordita Regular";
+    padding-left: 135px;
+    -webkit-appearance: initial;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  select:focus {
+    outline: none;
+    border: none;
+  }
+  .hider {
+    height: 10px;
+    width: 20px;
+    background-color: white;
+    position: absolute;
+    top: 44%;
+    right: 3px;
+  }
+  span {
+    position: absolute;
+    font-family: "Gordita Regular";
+    color: #dedede;
+    top: 50%;
+    left: 30px;
+    font-size: 18px;
+    transform: translateY(-50%);
+  }
+}
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: #dedede;
+  margin-top: 20px;
+}
+@media screen and (max-width: 1575px) {
+  .panel-header {
+    flex-direction: column;
+  }
+  .pheader-right {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1230px) {
+  .sidebar-nav {
+    height: 92vh;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .app-input {
+    .help {
+      p {
+        left: -260px;
+        i {
+          left: 88%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  .admin-navbar {
+    .logo {
+      #sidebar-toggle {
+        display: block;
+        margin-left: 30px;
+      }
+      #sidebar-toggle-lg {
+        display: none;
+      }
+    }
+  }
+  .panel {
+    padding: 30px 42px 0px 60px;
+    height: auto;
+    overflow-y: visible;
+  }
+  .sidebar-nav {
+    float: none;
+    position: fixed;
+    width: 350px;
+    height: 92vh;
+    z-index: 2;
+    top: 80px;
+    left: -350px;
+    transition: 0.5s;
+  }
+  // .sidebar-nav:hover {
+  //   width: 350px;
+  // }
+  .nav-wrapper {
+    width: 350px;
+  }
+  .side-menu {
+    width: 350px;
+    min-height: 700px;
+    padding-top: 1px;
+    .side-list,
+    .side-list-bottom {
+      padding: 5px 15px;
+      img {
+        width: 30px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    .side-list-bottom {
+      img {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+  .sub-menu {
+    padding-left: 90px;
+  }
+  .line {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .panel {
+    padding: 30px 10px 0px 10px;
+  }
+}
+
+// App Row
+.app-box {
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.07);
+  .app-img {
+    img {
+      width: 100%;
+    }
+  }
+  .app-content {
+    padding: 0px 20px 20px 20px;
+    hr {
+      border-top: 1px solid #dedede;
+      margin-top: 0;
+    }
+    .app-box-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        color: #6b6b6b;
+        font-family: "Gordita Regular";
+        font-size: 15px;
+      }
+      .comment-watch {
+        display: flex;
+        align-items: center;
+      }
+      small {
+        color: #bcbcbc;
+        font-size: 13px;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        .love {
+          font-size: 15px;
+        }
+        .eye {
+          font-size: 18px;
+          margin-right: 5px;
+        }
+        .chat {
+          font-size: 16px;
+          margin-right: 5px;
+        }
+      }
+    }
+    p {
+      font-family: "Gordita Regular";
+      color: #202020;
+      margin: 10px 0px 20px 0px;
+      font-size: 18px;
+    }
+    .app-box-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .ab-left {
+        display: flex;
+        align-items: center;
+        img {
+          width: 50px;
+          height: auto;
+          margin: 0;
+        }
+        span {
+          margin-left: 8px;
+          font-family: "Gordita Regular";
+          font-size: 18px;
+          color: #202020;
+        }
+      }
+    }
+  }
+  .ab-right {
+    cursor: pointer;
+    position: relative;
+    padding: 20px;
+    i {
+      color: #dedede;
+      font-size: 28px;
+    }
+    .ab-right-menu {
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: white;
+      width: 180px;
+      padding: 10px 10px 10px 10px;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+      border-radius: 5px;
+      z-index: 1;
+      display: none;
+      .caret {
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+      }
+      li {
+        // margin-top: 9px;
+        a {
+          color: black;
+          font-family: "Gordita Regular";
+          display: flex;
+          padding: 4px 10px;
+          border-radius: 3px;
+          align-items: center;
+          font-size: 18px;
+          text-decoration: none;
+          transition: 0.3s;
+          i {
+            margin-right: 10px;
+            color: black;
+            font-size: 17px;
+          }
+        }
+        a:hover {
+          background-color: $blue;
+          color: white;
+          i {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .ab-right:hover {
+    .ab-right-menu {
+      display: block;
+    }
+  }
+  .app-label {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 49px;
+    width: 52px;
+    background-color: $blue;
+    border-radius: 5px;
+    color: white;
+    font-size: 25px;
+    font-family: "Gordita Medium";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 570px) {
+  .app-box {
+    .ab-right {
+      .ab-right-menu {
+        left: -35%;
+        .caret {
+          left: 82%;
+        }
+      }
+    }
+  }
+}
+
+.nav-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+// .panel::-webkit-scrollbar {
+//   display: none;
+// }
+
+// .panel {
+//   -ms-overflow-style: none;
+//   scrollbar-width: none;
+// }
+.share-box {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+.share-icon {
+  position: relative;
+  cursor: pointer;
+}
+.share-icon:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #176ad4;
+  animation: share-animate 3s 1.5s infinite ease-out;
+  z-index: -1;
+}
+.share-icon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #176ad4;
+  animation: share-animate 3s 1s infinite ease-out;
+  z-index: -1;
+}
+@keyframes share-animate {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+.share-icon-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  li {
+    margin-bottom: 5px;
+    transform: translateX(90px);
+    transition: 0.5s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
+}
+
+@keyframes share-animation-on {
+  0% {
+    transform: translateX(90px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes share-animation-off {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(90px);
+  }
+}
+
+.app-show-btn {
+  margin: 50px 0px;
+}

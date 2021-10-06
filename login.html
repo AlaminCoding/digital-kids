@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Kids</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="icons/icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="login-section">
+      <div class="login-img">
+        <img src="img/login.png" alt="Login Image" />
+      </div>
+      <div class="login-box">
+        <div class="signup-label">
+          <p>Don't have an account?</p>
+          <a href="#" class="green-btn">Sign Up For Free!</a>
+        </div>
+        <div class="login-form">
+          <h2>Hello, Welcome Back.</h2>
+          <p>Login with your data that you entered during your registration</p>
+          <div class="form-btn">
+            <button class="log-btn btn-hover">Log In</button>
+            <button class="kid-log-btn">Kids Login</button>
+          </div>
+          <form action="" class="default-login">
+            <div class="form-group">
+              <label for="username">Username or Email Address</label>
+              <input
+                type="text"
+                name="username"
+                placeholder="example@gmail.com"
+              />
+            </div>
+            <div class="form-group">
+              <div class="label-group">
+                <label for="password">Password</label>
+                <a href="#">Forget Password</a>
+              </div>
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter Your Password"
+              />
+            </div>
+            <div class="form-group check-group">
+              <input type="checkbox" name="remember" id="remember" />
+              <label for="remember">Remember me</label>
+            </div>
+            <button class="green-btn" type="submit">Log In</button>
+            <div class="or-devider">
+              <hr />
+              <p>OR</p>
+              <hr />
+            </div>
+            <button class="google-btn">
+              <img src="img/google.png" alt="" />Log In with Google
+            </button>
+          </form>
+          <form action="" class="kids-login">
+            <div class="form-group">
+              <label for="name">Profile Name</label>
+              <input type="text" name="name" placeholder="Enter Profile Name" />
+            </div>
+            <div class="form-group">
+              <div class="label-group">
+                <label for="password">Passcode</label>
+                <a href="#">Forget Passcode</a>
+              </div>
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter Your Password"
+              />
+            </div>
+            <div class="form-group check-group">
+              <input type="checkbox" name="remember-kids" id="remember-kids" />
+              <label for="remember-kids">Remember me</label>
+            </div>
+            <button class="green-btn" type="submit">Log In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

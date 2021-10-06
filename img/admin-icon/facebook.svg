@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>fb@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="fb">
+            <g id="iconfinder_facebook_circle_color_107175" transform="translate(1.000000, 1.000000)">
+                <path d="M24,48 C10.7456,48 0,37.2544 0,24 C0,10.7448 10.7456,0 24,0 C37.2544,0 48,10.7448 48,24 C48,37.2544 37.2544,48 24,48 Z" id="Shape" fill="#3A589B"></path>
+                <path d="M20.612,37.056 L26.0072,37.056 L26.0072,23.9984 L29.6064,23.9984 L30.0832,19.4992 L26.0072,19.4992 L26.0128,17.2464 C26.0128,16.0736 26.1248,15.444 27.808,15.444 L30.0576,15.444 L30.0576,10.944 L26.4576,10.944 C22.1336,10.944 20.612,13.1272 20.612,16.7976 L20.612,19.4992 L17.9168,19.4992 L17.9168,23.9992 L20.612,23.9992 L20.612,37.056 L20.612,37.056 Z" id="Path" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
