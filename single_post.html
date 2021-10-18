@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Kids</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="icons/icons.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <header>
+        <nav class="admin-navbar">
+          <div class="logo">
+            <img src="img/logo.png" alt="" />
+            <i class="bi bi-list" id="sidebar-toggle"></i>
+            <i class="bi bi-list" id="sidebar-toggle-lg"></i>
+          </div>
+          <div class="navbar-right">
+            <div class="lang">
+              <img src="img/admin-icon/globe.png" alt="" />
+              <div class="lang-select">
+                <p>EN</p>
+                <ul class="lang-list">
+                  <li>EN</li>
+                  <li>BN</li>
+                </ul>
+              </div>
+            </div>
+            <div class="navbar-form">
+              <input type="text" placeholder="Search fun activity list" />
+              <i class="bi bi-search"></i>
+            </div>
+            <div class="user-profile-icon">
+              <a href="#" class="user-icon"
+                ><i class="bi bi-person-circle"></i
+              ></a>
+              <div class="user-profile-hover">
+                <h2>Hasibul Haque Prottoy</h2>
+                <span>@HasibulHaqueProttoy</span>
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="bi bi-people-fill"></i> Child Accounts</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"><i class="bi bi-person-fill"></i> My Profile</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="bi bi-lock-fill"></i> Change Password</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="toggle-btn">
+            <i class="bi bi-layout-text-sidebar-reverse"></i>
+          </div>
+        </nav>
+      </header>
+      <section class="main-panel">
+        <div class="sidebar-nav">
+          <div class="nav-wrapper">
+            <ul class="side-menu">
+              <li class="side-list">
+                <div class="icon-menu">
+                  <img src="img/admin-icon/learning.png" alt="" />
+                  <p>Learning</p>
+                </div>
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#"><i class="bi bi-search"></i> Explore</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-plus-lg"></i> Add Post</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-list-ul"></i> Your Post</a>
+                </li>
+              </ul>
+              <li class="side-list">
+                <div class="icon-menu">
+                  <img src="img/admin-icon/listenandfind.png" alt="" />
+                  <p>Listen and Find</p>
+                </div>
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#"><i class="bi bi-search"></i> Explore</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-plus-lg"></i> Add Post</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-list-ul"></i> Your Post</a>
+                </li>
+              </ul>
+              <li class="side-list">
+                <div class="icon-menu">
+                  <img src="img/admin-icon/funactivities.png" alt="" />
+                  <p>Fun Activities</p>
+                </div>
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#"><i class="bi bi-search"></i> Explore</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-plus-lg"></i> Add Post</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-list-ul"></i> Your Post</a>
+                </li>
+              </ul>
+              <li class="side-list">
+                <div class="icon-menu">
+                  <img src="img/admin-icon/shortstory.png" alt="" />
+                  <p>Short Story</p>
+                </div>
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#"><i class="bi bi-search"></i> Explore</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-plus-lg"></i> Add Post</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-list-ul"></i> Your Post</a>
+                </li>
+              </ul>
+              <li class="side-list">
+                <div class="icon-menu">
+                  <img src="img/admin-icon/blog.png" alt="" />
+                  <p>Blog</p>
+                </div>
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#"><i class="bi bi-search"></i> Explore</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-plus-lg"></i> Add Post</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-list-ul"></i> Your Post</a>
+                </li>
+              </ul>
+              <li class="side-list">
+                <div class="icon-menu">
+                  <img src="img/admin-icon/skillshare.png" alt="" />
+                  <p>Skill Share</p>
+                </div>
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#"><i class="bi bi-search"></i> Explore</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-plus-lg"></i> Add Post</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-list-ul"></i> Your Post</a>
+                </li>
+              </ul>
+              <li class="side-list">
+                <div class="icon-menu">
+                  <img src="img/admin-icon/quiz.png" alt="" />
+                  <p>Quiz</p>
+                </div>
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#"><i class="bi bi-search"></i> Explore</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-plus-lg"></i> Add Post</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-list-ul"></i> Your Post</a>
+                </li>
+              </ul>
+              <div class="line"></div>
+              <li class="side-list-bottom">
+                <div class="icon-menu">
+                  <img src="img/admin-icon/doc.png" alt="" />
+                  <p>Documentation</p>
+                </div>
+              </li>
+              <li class="side-list-bottom">
+                <div class="icon-menu">
+                  <img src="img/admin-icon/faq.png" alt="" />
+                  <p>FAQ</p>
+                </div>
+              </li>
+              <li class="side-list-bottom">
+                <div class="icon-menu">
+                  <img src="img/admin-icon/support.png" alt="" />
+                  <p>Support Center</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel">
+          <a href="#" class="page-back"
+            ><i class="bi bi-chevron-left"></i> back</a
+          >
+          <div class="single-post">
+            <h2>Make your world more colorful with printable coloring pages</h2>
+            <div class="react-box">
+              <div class="reacts"><i class="bi bi-suit-heart-fill"></i></div>
+              <div class="reacts"><i class="bi bi-eye-fill"></i> 36</div>
+              <div class="reacts"><i class="bi bi-chat-fill"></i> 2</div>
+            </div>
+            <div class="author-box">
+              <img src="img/author.png" alt="" />
+              <p class="auth-name">DKC</p>
+              <p class="lang">English</p>
+              <a href="#" class="green-btn">Follow</a>
+            </div>
+            <div class="main-post">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo
+                adipisci corporis non facilis tempora eligendi suscipit maiores
+                eos cumque, quis voluptates animi commodi tempore ipsa tenetur
+                ad sequi exercitationem deleniti molestias in! Officiis
+                distinctio eveniet, sit aperiam saepe consectetur hic itaque
+                nobis error dolorum! Suscipit aspernatur assumenda explicabo
+                voluptatum ab in deserunt natus. Aperiam tempora voluptate
+                facere laboriosam sint cupiditate unde nisi beatae iusto, ad
+                dolores possimus, id perferendis explicabo quis necessitatibus
+                quidem repudiandae ea et veniam impedit facilis vel. Doloribus
+                magnam nesciunt quod asperiores delectus voluptatem ipsum.
+                Dignissimos odio mollitia veniam temporibus. Fugit iusto
+                eligendi doloribus repudiandae blanditiis corrupti consequuntur
+                assumenda ex aliquam, voluptatem rerum soluta quas numquam quam,
+                laboriosam ad optio minima! Incidunt assumenda aliquid placeat
+                unde eius eos reprehenderit? At nobis amet exercitationem ipsam
+                consequatur tempore quod dolorum, iste optio illum. Debitis cum
+                numquam, minima quod est, illum officia voluptatum voluptatem
+                sint ut iure perferendis tempora ex ratione rem accusamus
+                excepturi ea quia cumque, deleniti dicta! Voluptates explicabo
+                natus a necessitatibus quidem ipsam id tempora, impedit
+                perferendis quas quam doloribus facilis porro assumenda libero
+                fugit adipisci dolorem esse blanditiis nobis non? Corporis, odio
+                fugit ad qui est facere cupiditate illum officia saepe iste at
+                eveniet officiis ex quibusdam autem nemo tenetur minus, quia
+                amet! Saepe, quisquam deleniti obcaecati nostrum, autem
+                molestias accusamus in reprehenderit beatae possimus suscipit
+                corrupti qui maiores fuga adipisci id hic dignissimos! Dolore,
+                cum? Suscipit, nobis quod. Iure consequuntur adipisci sunt
+                laborum aliquam nulla tenetur illo dolorum quos, eius voluptas,
+                sequi numquam molestiae corporis velit distinctio neque, ipsam a
+                sint recusandae? Modi eum enim laudantium, reiciendis excepturi
+                laboriosam amet quidem. Possimus aliquam nesciunt voluptatum aut
+                reiciendis dignissimos corporis dolorum adipisci corrupti fugit,
+                exercitationem velit quod aperiam vero eligendi quisquam
+                voluptate at quasi natus, ut doloremque! Ea, non pariatur, quos
+                nisi ex nemo illum consequatur accusamus aspernatur iure numquam
+                voluptate recusandae maxime totam. Voluptatem dicta porro
+                dolorem illum assumenda facere ipsam libero? Autem laboriosam
+                iste, eum ipsum nisi quo ducimus, aspernatur excepturi ab
+                dolores qui possimus. Repellendus perferendis minima vel in
+                laborum natus, sequi nesciunt dolor voluptatem omnis quia ex
+                expedita obcaecati, neque dolorem non! Saepe, distinctio
+                perspiciatis repellendus mollitia voluptatibus provident earum
+                at tenetur obcaecati consequuntur, officiis architecto culpa
+                aliquid, sed dolorum odio quis pariatur doloribus? Perspiciatis
+                impedit similique illo sed eum saepe aspernatur praesentium
+                cupiditate porro dolorem magni nostrum quis laboriosam voluptas
+                magnam explicabo iure, beatae pariatur nisi. Fugit doloribus vel
+                eos voluptates iste eveniet aspernatur reprehenderit sit
+                incidunt consequatur pariatur, sequi explicabo amet, alias error
+                fuga, quos velit! Ipsum nostrum eius temporibus, saepe maxime
+                quisquam provident deserunt architecto odio praesentium sint
+                rem! Aspernatur dolores dicta ipsum, similique laborum vero
+                nesciunt libero animi sit, possimus unde fugit eligendi velit
+                voluptates ea architecto labore expedita iste. Praesentium autem
+                itaque in deleniti ducimus accusantium omnis illo quibusdam a
+                optio pariatur odio aperiam, quasi velit dolorem non totam hic
+                explicabo nam aut et, expedita accusamus necessitatibus
+                excepturi. Repudiandae modi similique dignissimos eveniet quos
+                provident, aperiam praesentium molestias illo, debitis unde
+                laborum, consequatur ratione? Culpa, ipsam vitae.
+              </p>
+            </div>
+            <a href="#" class="green-btn"
+              ><i class="bi bi-pencil-square"></i> Edit Post</a
+            >
+          </div>
+        </div>
+      </section>
+      <div class="share-box">
+        <ul class="share-icon-list">
+          <li>
+            <a href="#"><img src="img/admin-icon/whatsapp.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="img/admin-icon/facebook.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="img/admin-icon/twitter.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="img/admin-icon/linkedin.svg" alt="" /></a>
+          </li>
+        </ul>
+        <div class="share-icon">
+          <img src="img/admin-icon/share.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"
+    ></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/navbar-admin.js"></script>
+    <script>
+      var editor = new FroalaEditor("#story");
+      setTimeout(() => {
+        document.getElementById("fr-logo").style.display = "none";
+      }, 500);
+    </script>
+    <script src="js/search.js"></script>
+    <script src="js/image.js"></script>
+  </body>
+</html>

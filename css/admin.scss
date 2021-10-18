@@ -58,6 +58,21 @@ p {
   background-color: transparent;
   color: $blue;
 }
+.draft-btn {
+  @include btn();
+  background-color: white;
+  border: 1px solid $green;
+  color: black;
+}
+.delete-btn {
+  @include btn();
+  background-color: #f9264a;
+  border: 1px solid #f9264a;
+}
+.delete-btn:hover {
+  background-color: transparent;
+  color: #f9264a;
+}
 // Admin Navbar Panel
 header {
   padding: 0px 60px;
@@ -65,7 +80,7 @@ header {
   position: fixed;
   width: 100%;
   background-color: white;
-  z-index: 2;
+  z-index: 12;
 }
 .admin-navbar {
   height: 100px;
@@ -160,6 +175,96 @@ header {
     a {
       margin-left: 20px;
     }
+    .user-profile-icon {
+      position: relative;
+      font-family: "Gordita Regular";
+      margin: 0px 200px;
+      .user-icon {
+        color: #6b6b6b;
+        font-size: 40px;
+        margin: 0;
+      }
+      .user-profile-hover {
+        position: absolute;
+        top: 52px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        padding: 0px 9px 0px 9px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        border-radius: 4px;
+        width: 205px;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        animation-name: zeroHeight;
+        animation-duration: 0.5s;
+        h2 {
+          color: $blue;
+          font-size: 16px;
+          margin-top: 10px;
+        }
+        span {
+          font-size: 14px;
+          color: #6b6b6b;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 15px 0px;
+          li {
+            a {
+              padding: 3px;
+              margin-left: 0px;
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+              font-size: 15px;
+              color: black;
+              border-radius: 2px;
+              transition: 0.3s;
+              i {
+                margin-right: 5px;
+                position: relative;
+                top: 1px;
+              }
+              &:hover {
+                background-color: $blue;
+                color: white;
+                padding-left: 10px;
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        .user-profile-hover {
+          animation-name: autoHeight;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+        }
+      }
+      @keyframes autoHeight {
+        0% {
+          height: 0px;
+          opacity: 0;
+        }
+        100% {
+          height: 200px;
+          opacity: 1;
+        }
+      }
+      @keyframes zeroHeight {
+        0% {
+          height: 200px;
+          opacity: 1;
+        }
+        100% {
+          height: 0px;
+          opacity: 0;
+        }
+      }
+    }
   }
   .toggle-btn {
     display: none;
@@ -195,6 +300,21 @@ header {
       a {
         margin-left: 0px;
         margin-top: 20px;
+      }
+      .user-profile-icon {
+        margin: 0;
+        margin-top: 20px;
+        .user-profile-hover {
+          left: 0;
+          transform: translateX(0);
+          ul {
+            li {
+              a {
+                margin: 0;
+              }
+            }
+          }
+        }
       }
     }
     .toggle-btn {
@@ -798,6 +918,7 @@ header {
   position: fixed;
   bottom: 40px;
   right: 40px;
+  z-index: 1;
 }
 .share-icon {
   position: relative;
@@ -871,4 +992,266 @@ header {
 
 .app-show-btn {
   margin: 50px 0px;
+}
+
+// New Post Page
+.post-left {
+  height: 100%;
+  .page-back {
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 30px;
+    display: block;
+  }
+}
+.post-right {
+  h2 {
+    color: #202020;
+    font-family: "Gordita Medium";
+    font-size: 28px;
+    margin-bottom: 18px;
+  }
+  p {
+    font-family: "Gordita Regular";
+    color: #202020;
+    margin-bottom: 16px;
+  }
+  .post-right-form {
+    background-color: white;
+    padding: 30px 40px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+  }
+}
+.post-input-group {
+  margin-bottom: 20px;
+  label {
+    display: block;
+    font-family: "Gordita Regular";
+    color: #202020;
+    margin-bottom: 10px;
+    span {
+      color: #6b6b6b;
+    }
+  }
+  input {
+    font-family: "Gordita Regular";
+    display: block;
+    width: 100%;
+    border: 1px solid #dedede;
+    background-color: white;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 10px;
+    &:focus {
+      outline: none;
+      border: 1px solid $blue;
+    }
+  }
+  #search-input {
+    border: none;
+    height: 48px;
+    &:focus {
+      border: none;
+    }
+  }
+  .app-input {
+    height: 50px;
+    border: 1px solid #dedede;
+  }
+  select {
+    font-family: "Gordita Regular";
+    display: block;
+    width: 100%;
+    border: 1px solid #dedede;
+    background-color: white;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 14px;
+    &:focus {
+      outline: none;
+      border: 1px solid $blue;
+    }
+  }
+  .fr-box.fr-basic .fr-element {
+    min-height: 562px;
+  }
+  .fr-quick-insert {
+    display: none;
+  }
+  .fr-toolbar .fr-command.fr-btn {
+    z-index: 1;
+  }
+  .gender-check-group {
+    display: flex;
+    align-items: center;
+    .check-group {
+      display: flex;
+      align-items: center;
+      input {
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+      }
+      label {
+        margin-bottom: 0;
+        cursor: pointer;
+        margin-left: 3px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .thumb-img {
+    height: 250px;
+    width: 100%;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
+    input {
+      position: absolute;
+      background-color: red;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .thumb-image {
+      height: 100%;
+      display: none;
+    }
+    .upload-overlay {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 36px;
+        margin-bottom: 15px;
+      }
+      p {
+        text-align: center;
+        color: #aeaeae;
+        max-width: 360px;
+        margin: 0 auto;
+      }
+    }
+    .thumb-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      border: 1px solid $blue;
+      background-color: $blue;
+      padding: 5px 10px;
+      color: white;
+      font-size: 18px;
+      border-radius: 5px;
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 1300px) {
+  .post-right {
+    .post-right-form {
+      padding: 20px;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .post-input-group {
+    .fr-box.fr-basic {
+      .fr-element {
+        min-height: 300px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .post-input-group {
+    .thumb-img {
+      height: 200px;
+      .upload-overlay {
+        p {
+          font-size: 12px;
+          padding: 0px 10px;
+        }
+      }
+    }
+  }
+}
+.post-btns {
+  padding-bottom: 50px;
+  button {
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .post-btns {
+    button {
+      font-size: 14px;
+    }
+  }
+}
+
+// Single Post Page
+.page-back {
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.single-post {
+  padding-bottom: 50px;
+  h2 {
+    font-family: "Gordita Medium";
+    font-size: 28px;
+    color: #202020;
+  }
+  .react-box {
+    display: flex;
+    align-items: center;
+    color: $blue;
+    margin: 25px 0px;
+    .reacts {
+      display: flex;
+      align-items: center;
+      margin-right: 7px;
+    }
+  }
+  .author-box {
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 15px;
+    }
+    p {
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
+    .green-btn {
+      font-size: 16px;
+      padding: 6px 20px;
+    }
+  }
+  .main-post {
+    margin: 25px 0px;
+    p {
+      font-family: "Gordita Regular";
+      font-size: 18px;
+      line-height: 33px;
+      max-width: 1300px;
+    }
+  }
 }
